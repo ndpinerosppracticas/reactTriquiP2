@@ -13,8 +13,7 @@ function Square(props) {
 class Board extends React.Component {
   renderSquare(i) {
     return (
-      <Square
-        value={this.props.squares[i]}
+      <Square value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
     );
@@ -67,8 +66,7 @@ class Game extends React.Component {
     squares[i] = this.state.xIsNext ? "X" : "O";
     this.setState({
       history: history.concat([
-        {
-          squares: squares
+        { squares: squares
         }
       ]),
       stepNumber: history.length,
